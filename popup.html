@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>LinkedIn Text Formatter</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>LinkedIn Formatter</title>
+  <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
-  <h2>LinkedIn Text Formatter</h2>
-  <textarea id="inputText" placeholder="Enter your text here..."></textarea>
-
-  <select id="formatStyle">
-    <option value="bold">Bold</option>
-    <option value="italic">Italic</option>
-    <option value="boldItalic">Bold Italic</option>
-    <option value="monospace">Monospace</option>
-  </select>
-
-  <button id="convertBtn">Convert</button>
-  <textarea id="outputText" readonly></textarea>
+  <h2 class="h1">LinkedIn Text Formatter</h2>
+  <textarea id="inputText" placeholder="Type or paste your content here..."></textarea>
+  <div class="button-group">
+    <button id="boldBtn">Bold</button>
+    <button id="italicBtn">Italic</button>
+    <button id="boldItalicBtn">Bold Italic</button>
+    <button id="monospaceBtn">Monospace</button>
+  </div>
+  <div class="dropdown">
+  <button id="bulletBtn">• Bullet </button>
+  <div id="bulletDropdown" class="dropdown-content">
+    <div data-bullet="•">• Circle</div>
+    <div data-bullet="▪">▪ Square</div>
+    <div data-bullet="‣">‣ Triangle</div>
+    <div data-bullet="➤">➤ Arrow</div>
+    <div data-bullet="✔">✔ Check</div>
+    <div data-bullet="✦">✦ Star</div>
+    <div data-bullet="⚫">⚫ Filled Circle</div>
+    <div data-bullet="◦">◦ Hollow Circle</div>
+  </div>
+</div>
   <button id="copyBtn">Copy to Clipboard</button>
 
   <script src="popup.js"></script>
