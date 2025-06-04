@@ -1,0 +1,14 @@
+
+
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Text Formatter",
+  "version": "1.0",
+  "description": "Convert text to LinkedIn-compatible Unicode bold, italic fonts.",
+  "action": {
+    "default_popup": "popup.html",
+     "default_icon": "icon.png"
+    },
+  
+  "permissions": ["clipboardWrite"]
+}
