@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LinkedIn Text Formatter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>LinkedIn Text Formatter</h2>
+  <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+
+  <select id="formatStyle">
+    <option value="bold">Bold</option>
+    <option value="italic">Italic</option>
+    <option value="boldItalic">Bold Italic</option>
+    <option value="monospace">Monospace</option>
+  </select>
+
+  <button id="convertBtn">Convert</button>
+  <textarea id="outputText" readonly></textarea>
+  <button id="copyBtn">Copy to Clipboard</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
