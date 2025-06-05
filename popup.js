@@ -47,6 +47,8 @@ function formatSelection(styleKey) {
 
   if (start === end) return;
 
+  const scrollTop = input.scrollTop;
+
   const before = input.value.substring(0, start);
   const selected = input.value.substring(start, end);
   const after = input.value.substring(end);
@@ -61,6 +63,8 @@ function formatSelection(styleKey) {
 
   input.focus();
   input.setSelectionRange(start, start + styled.length);
+
+  input.scrollTop = scrollTop;
 }
 
 document.getElementById('boldBtn').addEventListener('click', () => formatSelection('bold'));
@@ -89,7 +93,7 @@ bulletBtn.addEventListener('click', (e) => {
 bulletDropdown.querySelectorAll('div').forEach(option => {
   option.addEventListener('click', () => {
     currentBullet = option.getAttribute('data-bullet');
-    bulletBtn.innerText = `${currentBullet} Bullet ▼`;
+    bulletBtn.innerText = `${currentBullet} Bullet`;
 
     insertBullet(currentBullet);
     bulletBtn.parentElement.classList.remove('show');
