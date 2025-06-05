@@ -8,6 +8,8 @@ When I noticed that LinkedIn doesn't support Markdown syntax like `**bold**` or 
 So I created a custom Chrome extension that lets you format selected text using Unicode styles — directly inside any textarea, perfect for LinkedIn posts, messages, or comments.
 
 ---
+**Demo Video**: [Watch Demo Video](https://res.cloudinary.com/dd6lqkak0/video/upload/v1749140563/Linkedin_text_extension_dk7pka.mp4)
+
 
 ## ✨ Key Features
 
