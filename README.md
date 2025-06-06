@@ -74,7 +74,3 @@ Feel free to fork and make it even better.
 
 ---
 
-## 📣 Enjoy making your LinkedIn posts pop!  
-*Built with HTML, CSS, JavaScript, and a love for better UX.*
-
----
