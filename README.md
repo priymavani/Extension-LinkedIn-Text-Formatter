@@ -8,6 +8,13 @@ When I noticed that LinkedIn doesn't support Markdown syntax like `**bold**` or 
 So I created a custom Chrome extension that lets you format selected text using Unicode styles — directly inside any textarea, perfect for LinkedIn posts, messages, or comments.
 
 ---
+<p align="center">
+  <video width="600" controls muted loop>
+    <source src="Linkedin_text_extension.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
 **Demo Video**: [Watch Demo Video](https://res.cloudinary.com/dd6lqkak0/video/upload/v1749140563/Linkedin_text_extension_dk7pka.mp4)
 
 
