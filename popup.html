@@ -6,7 +6,13 @@
   <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
-  <h2 class="h1">LinkedIn Text Formatter</h2>
+  <div class="header">
+    <h2 class="h1">LinkedIn Text Formatter</h2>
+    <div class="header-actions">
+      <button id="themeToggleBtn" class="theme-toggle-btn">Dark</button>
+      <button id="closeBtn" class="close-btn">✕</button>
+    </div>
+  </div>
   <textarea id="inputText" placeholder="Type or paste your content here..."></textarea>
   <div class="button-group">
     <button id="boldBtn">Bold</button>
