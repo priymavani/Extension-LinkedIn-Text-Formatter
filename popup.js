@@ -79,6 +79,8 @@ document.getElementById('copyBtn').addEventListener('click', () => {
 
 const bulletBtn = document.getElementById('bulletBtn');
 const bulletDropdown = document.getElementById('bulletDropdown');
+const closeBtn = document.getElementById('closeBtn');
+const themeToggleBtn = document.getElementById('themeToggleBtn');
 
 let currentBullet = '•'; 
 
@@ -102,6 +104,7 @@ bulletDropdown.querySelectorAll('div').forEach(option => {
 
 function insertBullet(bullet) {
   const { selectionStart } = input;
+  const scrollTop = input.scrollTop;
   const lines = input.value.split('\n');
 
   let charCount = 0;
@@ -117,6 +120,17 @@ function insertBullet(bullet) {
   lines[lineIndex] = `${bullet} ${updatedLine}`;
   input.value = lines.join('\n');
   input.focus();
+
+  // Place cursor just after the inserted bullet on the same line
+  let lineStartIndex = 0;
+  for (let i = 0; i < lineIndex; i++) {
+    lineStartIndex += lines[i].length + 1; // +1 for '\n'
+  }
+  const caretPos = lineStartIndex + bullet.length + 1; // bullet + space
+  input.setSelectionRange(caretPos, caretPos);
+
+  // Restore previous scroll position to avoid jumping to the end
+  input.scrollTop = scrollTop;
 }
 
 window.addEventListener('click', e => {
@@ -124,3 +138,19 @@ window.addEventListener('click', e => {
     bulletBtn.parentElement.classList.remove('show');
   }
 });
+
+// Close popup (works when popup is opened as its own window/tab)
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    window.close();
+  });
+}
+
+// Theme toggle (light/dark)
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    themeToggleBtn.textContent = isDark ? 'Light' : 'Dark';
+  });
+}
