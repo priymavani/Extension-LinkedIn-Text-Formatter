@@ -3,14 +3,13 @@
 **Formatting Text with Style — Without Markdown!**
 
 ---
-
 When I noticed that LinkedIn doesn't support Markdown syntax like `**bold**` or `_italic_`, I decided to build something to solve it.  
 So I created a custom Chrome extension that lets you format selected text using Unicode styles — directly inside any textarea, perfect for LinkedIn posts, messages, or comments.
 
 ---
 <p align="center">
   <video width="600" controls muted loop>
-    <source src="Linkedin_text_extension.mp4" type="video/mp4">
+    <source src="https://github.com/user-attachments/assets/7dcf3dfa-92a0-41ee-85e6-f3770701abc5" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </p>
